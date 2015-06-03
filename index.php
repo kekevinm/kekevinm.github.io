@@ -42,6 +42,31 @@
             <?php 
             if(isset($_GET["var"])){
               switch ($_GET["var"]) {
+                case '9':
+              echo" <form class='form-horizontal'method='POST'action='Bd.php'>
+  <fieldset>
+    <legend>DATOS</legend>
+    <div class='form-group'>
+      <label for='inputEmail' class='col-lg-2 control-label'>ID</label>
+      <div class='col-lg-10'>
+        <input type='text' class='form-control' name='IdE' id='Id' placeholder='ID'>
+      </div>
+    </div>
+      <div class='form-group'>
+      <label for='inputNombre' class='col-lg-2 control-label'>Email</label>
+      <div class='col-lg-10'>
+          <input type='text' class='form-control'id='EmailE' name='EmailE'placeholder='Email'>
+      </div>
+    </div>
+    <div class='form-group'>
+      <div class='col-lg-10 col-lg-offset-2'>
+      <a href='index.php?var=6' class='btn btn-primary'>Nuevo</a>
+      <button type='submit' name='btne' class='btn btn-primary'>Elimina</button>
+      </div>
+    </div>
+  </fieldset>
+</form>";
+                  break;
                 case '1':
                 echo "<h3>Elige la que mas te guste</h3>
                  <div id='img1'>
@@ -226,55 +251,50 @@
                 ;
                     break;
                 case '6':
-                echo  "<form class='form-horizontal'>
+                echo  "<form class='form-horizontal'method='POST'action='Bd.php'>
   <fieldset>
     <legend>DATOS</legend>
     <div class='form-group'>
       <label for='inputEmail' class='col-lg-2 control-label'>Email</label>
       <div class='col-lg-10'>
-        <input type='text' class='form-control' id='inputEmail' placeholder='Email'>
+        <input type='text' class='form-control' Name='eemail' id='inputEmail' placeholder='Email'>
       </div>
     </div>
       <div class='form-group'>
       <label for='inputNombre' class='col-lg-2 control-label'>Nombre</label>
       <div class='col-lg-10'>
-        <input type='text' class='form-control' id='inputNombre' placeholder='Nombre'>
+          <input type='text' class='form-control'id='inputNombre' name='nnom'placeholder='Nombre'>
       </div>
     </div>
       <div class='form-group'>
       <label for='inputClave' class='col-lg-2 control-label'>Clave de Modelo</label>
       <div class='col-lg-10'>
-        <input type='text' class='form-control' id='inputClave' placeholder='Clave de Modelo'>
+        <input type='text' class='form-control' id='inputClave' name='Claveb' placeholder='Clave de Modelo'>
       </div>
     </div>
     <div class='form-group'>
       <label for='inputColor' class='col-lg-2 control-label'>Color</label>
       <div class='col-lg-10'>
-        <input type='text' class='form-control' id='inputColor' placeholder='Color'>
+        <input type='text' class='form-control' id='inputColor' name='Col' placeholder='Color'>
       </div>
     </div>
     <div class='form-group'>
       <label for='inputClaveTargeta' class='col-lg-2 control-label'>Clave de Tarjeta</label>
       <div class='col-lg-10'>
-        <input type='text' class='form-control' id='inputClaveTargeta' placeholder='Clave de Tarjeta'>
+        <input type='text' class='form-control' id='inputClaveTargeta' name='Ct' placeholder='Clave de Tarjeta'>
       </div>
     </div>
-
-
-
-
-   
     <div class='form-group'>
       <label for='textArea' class='col-lg-2 control-label'>Otras Caracteristicas</label>
       <div class='col-lg-10'>
-        <textarea class='form-control' rows='3' id='textArea'></textarea>
+        <textarea class='form-control' rows='3' id='textArea' name='Caracte'></textarea>
         <span class='help-block'>A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
       </div>
     </div>
-    
     <div class='form-group'>
       <div class='col-lg-10 col-lg-offset-2'>
-      <a href='index.php' class='list-group-item active'>Aceptar</a>
+      <a href='index.php?var=9' class='btn btn-danger'>Eliminar</a>
+      <button type='submit' class='btn btn-primary'>Aceptar</button>
       </div>
     </div>
   </fieldset>
@@ -293,7 +313,7 @@ Visita nuestro Sitio, tendrás una buena experiencia con Bicimax, donde encontra
                   break;
                   case '8':
                   echo "<video widht='200' height='300' controls autoplay'>
-                <source src='video.mp4' type='video/mp4'>NAVEGADOR NO SOPORTA EL VIDEO</source></video>";;
+                <source src='video.mp4' type='video/mp4'>NAVEGADOR NO SOPORTA EL VIDEO</source></video>";
                   break;
               }
             }
